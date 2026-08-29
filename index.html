@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MaxTest</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #000000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 32px;
+  }
+
+  h1 {
+    color: #ffffff;
+    font-size: 48px;
+    letter-spacing: 2px;
+  }
+
+  .youtube-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #FF0000;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .youtube-btn:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+  }
+
+  .youtube-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #ffffff;
+  }
+</style>
+</head>
+<body>
+
+  <h1>MaxTest</h1>
+
+  <a class="youtube-btn" href="https://www.youtube.com/@maxjhon22" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+    Ver en YouTube
+  </a>
+
+</body>
+</html>
