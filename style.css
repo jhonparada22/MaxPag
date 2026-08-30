@@ -200,7 +200,7 @@ body {
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
 }
 
-.social-btn.youtube-main { background: #7a0505; }
+.social-btn.youtube-main { background: #d32f2f; }
 .social-btn.youtube-secondary { background: #ffffff; }
 .social-btn.kick { background: #8fce3e; }
 .social-btn.x { background: #111111; }
@@ -210,6 +210,7 @@ body {
   width: 26px;
   height: 26px;
   fill: #ffffff;
+  display: block;
 }
 
 .social-btn.youtube-secondary .social-icon {
@@ -222,12 +223,53 @@ body {
   font-weight: 700;
 }
 
+.icon-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .glyph-2 {
+  position: absolute;
+  bottom: -3px;
+  right: -11px;
   color: #ff4d4d;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  align-self: flex-end;
-  margin: 0 2px 6px -2px;
+}
+
+/* ---------- Cartel de en construcción ---------- */
+
+.construction-sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 28px 40px;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  animation: dropIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.construction-img {
+  width: 140px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.construction-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  letter-spacing: 0.3px;
 }
 
 /* ---------- Taskbar ---------- */
