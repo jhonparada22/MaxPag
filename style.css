@@ -162,37 +162,116 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* ---------- Pantalla principal ---------- */
+/* ---------- Pantalla principal: columna de redes ---------- */
 
-.main-content {
+.social-links {
+  position: fixed;
+  top: 50%;
+  left: 36px;
+  transform: translateY(-50%);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .social-btn {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 84px;
-  height: 84px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
   text-decoration: none;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: dropIn 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
 }
+
+.social-links a:nth-child(1) { animation-delay: 0.05s; }
+.social-links a:nth-child(2) { animation-delay: 0.12s; }
+.social-links a:nth-child(3) { animation-delay: 0.19s; }
+.social-links a:nth-child(4) { animation-delay: 0.26s; }
+.social-links a:nth-child(5) { animation-delay: 0.33s; }
 
 .social-btn:hover {
-  transform: translateY(-4px) scale(1.05);
-  background: rgba(255, 0, 0, 0.75);
+  transform: scale(1.1);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
 }
 
+.social-btn.youtube-main { background: #7a0505; }
+.social-btn.youtube-secondary { background: #e8262c; }
+.social-btn.kick { background: #8fce3e; }
+.social-btn.x { background: #111111; }
+.social-btn.tiktok { background: #a52bc4; }
+
 .social-icon {
-  width: 38px;
-  height: 38px;
+  width: 26px;
+  height: 26px;
   fill: #ffffff;
+}
+
+.glyph {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.badge-2 {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #111111;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Taskbar ---------- */
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: linear-gradient(180deg, rgba(108, 145, 196, 0.9), rgba(58, 92, 148, 0.92));
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.taskbar-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.taskbar-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.taskbar-clock {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
