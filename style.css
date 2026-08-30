@@ -201,7 +201,7 @@ body {
 }
 
 .social-btn.youtube-main { background: #7a0505; }
-.social-btn.youtube-secondary { background: #e8262c; }
+.social-btn.youtube-secondary { background: #ffffff; }
 .social-btn.kick { background: #8fce3e; }
 .social-btn.x { background: #111111; }
 .social-btn.tiktok { background: #a52bc4; }
@@ -212,27 +212,22 @@ body {
   fill: #ffffff;
 }
 
+.social-btn.youtube-secondary .social-icon {
+  fill: #ff4d4d;
+}
+
 .glyph {
   color: #ffffff;
   font-size: 26px;
   font-weight: 700;
 }
 
-.badge-2 {
-  position: absolute;
-  bottom: -3px;
-  right: -3px;
-  width: 21px;
-  height: 21px;
-  border-radius: 50%;
-  background: #111111;
-  color: #ffffff;
-  font-size: 11px;
+.glyph-2 {
+  color: #ff4d4d;
+  font-size: 13px;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgba(255, 255, 255, 0.85);
+  align-self: flex-end;
+  margin: 0 2px 6px -2px;
 }
 
 /* ---------- Taskbar ---------- */
