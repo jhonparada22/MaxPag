@@ -47,4 +47,36 @@ document.addEventListener('DOMContentLoaded', () => {
       switchScreen(bootScreen, mainScreen);
     }, 600 + BOOT_DURATION);
   });
+
+  // ---------- Ventana flotante tipo app ----------
+  const windowOverlay = document.getElementById('windowOverlay');
+  const windowTitle = document.getElementById('windowTitle');
+  const windowFrame = document.getElementById('windowFrame');
+  const windowOpenTab = document.getElementById('windowOpenTab');
+  const windowClose = document.getElementById('windowClose');
+  const socialButtons = document.querySelectorAll('.social-btn[data-url]');
+
+  function openWindow(url, label) {
+    windowTitle.textContent = label;
+    windowOpenTab.href = url;
+    windowFrame.src = url;
+    windowOverlay.hidden = false;
+  }
+
+  function closeWindow() {
+    windowOverlay.hidden = true;
+    windowFrame.src = '';
+  }
+
+  socialButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      openWindow(btn.dataset.url, btn.dataset.label);
+    });
+  });
+
+  windowClose.addEventListener('click', closeWindow);
+
+  windowOverlay.addEventListener('click', (e) => {
+    if (e.target === windowOverlay) closeWindow();
+  });
 });

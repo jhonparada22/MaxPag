@@ -38,33 +38,28 @@
   <section class="screen" id="main-screen" hidden>
 
     <div class="social-links">
-      <a class="social-btn youtube-main" href="https://www.youtube.com/@maxjhon22" target="_blank" rel="noopener noreferrer" aria-label="YouTube principal">
+      <button class="social-btn youtube-main" data-url="https://www.youtube.com/@maxjhon22" data-label="YouTube" aria-label="YouTube principal">
         <svg viewBox="0 0 24 24" class="social-icon"><path d="M21.6 7.2c-.25-1-1-1.7-1.95-1.95C17.9 4.75 12 4.75 12 4.75s-5.9 0-7.65.5C3.4 5.5 2.65 6.2 2.4 7.2 1.9 9 1.9 12 1.9 12s0 3 .5 4.8c.25 1 1 1.7 1.95 1.95 1.75.5 7.65.5 7.65.5s5.9 0 7.65-.5c.95-.25 1.7-.95 1.95-1.95.5-1.8.5-4.8.5-4.8s0-3-.5-4.8ZM9.9 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg>
-      </a>
+      </button>
 
-      <a class="social-btn youtube-secondary" href="https://www.youtube.com/@maxresubidos" target="_blank" rel="noopener noreferrer" aria-label="YouTube segundo canal">
+      <button class="social-btn youtube-secondary" data-url="https://www.youtube.com/@maxresubidos" data-label="YouTube · Resubidos" aria-label="YouTube segundo canal">
         <span class="icon-wrap">
           <svg viewBox="0 0 24 24" class="social-icon"><path d="M21.6 7.2c-.25-1-1-1.7-1.95-1.95C17.9 4.75 12 4.75 12 4.75s-5.9 0-7.65.5C3.4 5.5 2.65 6.2 2.4 7.2 1.9 9 1.9 12 1.9 12s0 3 .5 4.8c.25 1 1 1.7 1.95 1.95 1.75.5 7.65.5 7.65.5s5.9 0 7.65-.5c.95-.25 1.7-.95 1.95-1.95.5-1.8.5-4.8.5-4.8s0-3-.5-4.8ZM9.9 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg>
           <span class="glyph-2">2</span>
         </span>
-      </a>
+      </button>
 
-      <a class="social-btn kick" href="https://kick.com/maxjhon22" target="_blank" rel="noopener noreferrer" aria-label="Kick">
+      <button class="social-btn kick" data-url="https://kick.com/maxjhon22" data-label="Kick" aria-label="Kick">
         <span class="glyph">K</span>
-      </a>
+      </button>
 
-      <a class="social-btn x" href="https://x.com/MaxaJhon22" target="_blank" rel="noopener noreferrer" aria-label="X">
+      <button class="social-btn x" data-url="https://x.com/MaxaPan22" data-label="X" aria-label="X">
         <svg viewBox="0 0 24 24" class="social-icon"><path d="M17.5 3h3l-7.4 8.4L21.9 21h-6.8l-5.3-6.9L3.7 21H.7l7.9-9L.9 3h7l4.8 6.3L17.5 3Zm-1.2 16.1h1.7L7.8 4.8H6l10.3 14.3Z"/></svg>
-      </a>
+      </button>
 
-      <a class="social-btn tiktok" href="https://www.tiktok.com/@maxjhon22" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+      <button class="social-btn tiktok" data-url="https://www.tiktok.com/@maxjhon22" data-label="TikTok" aria-label="TikTok">
         <svg viewBox="0 0 24 24" class="social-icon"><path d="M16.6 5.8c-.9-.9-1.4-2.1-1.5-3.4h-3.2v13.3c0 1.5-1.2 2.7-2.7 2.7-1.5 0-2.7-1.2-2.7-2.7 0-1.5 1.2-2.7 2.7-2.7.3 0 .6.05.9.14v-3.3c-.3-.04-.6-.07-.9-.07-3.2 0-5.9 2.6-5.9 5.9 0 3.2 2.6 5.9 5.9 5.9 3.2 0 5.9-2.6 5.9-5.9V9.2c1.2.9 2.7 1.4 4.3 1.4V7.4c-1 0-1.9-.3-2.8-.9-.3-.2-.6-.5-.9-.7Z"/></svg>
-      </a>
-    </div>
-
-    <div class="construction-sign">
-      <img src="assets/const.png" alt="En construcción" class="construction-img">
-      <p class="construction-text">Página en construcción</p>
+      </button>
     </div>
 
     <div class="taskbar">
@@ -72,6 +67,24 @@
       <div class="taskbar-clock" id="clock">00:00</div>
     </div>
   </section>
+
+  <!-- Ventana flotante que simula abrir un programa -->
+  <div class="window-overlay" id="windowOverlay" hidden>
+    <div class="app-window" id="appWindow">
+      <div class="window-chrome">
+        <div class="window-dots">
+          <span class="dot red" id="windowClose" title="Cerrar"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <span class="window-title" id="windowTitle">App</span>
+        <a class="window-open-tab" id="windowOpenTab" href="#" target="_blank" rel="noopener noreferrer" title="Abrir en una pestaña nueva">↗</a>
+      </div>
+      <div class="window-body">
+        <iframe id="windowFrame" src="" title="Contenido"></iframe>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
