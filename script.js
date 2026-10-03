@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const infoClose = document.getElementById('infoClose');
 
   document.querySelectorAll('.desktop-icon').forEach((icon) => {
-    icon.addEventListener('dblclick', () => {
+    icon.addEventListener('click', () => {
       infoTitle.textContent = icon.dataset.title;
       infoBody.innerHTML = icon.dataset.content;
       infoOverlay.hidden = false;
