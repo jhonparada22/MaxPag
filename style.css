@@ -182,9 +182,10 @@ a, button, .desktop-icon, .taskbar-clock, .tray-btn {
 .desktop-icons {
   position: fixed;
   top: 28px;
-  left: 28px;
+  right: 28px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 22px;
   z-index: 5;
 }
